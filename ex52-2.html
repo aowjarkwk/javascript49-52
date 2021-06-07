@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>테이블 리스트에서 문서 객체 선택</title>
+    <script>
+        window.onload = function () { };
+        function button() {
+            var header = document.getElementsByTagName('h2')
+            var buttons = document.getElementsByTagName('button')
+            for(i=0;i<buttons.length;i++){
+                var i = document.getElementById('i')
+                
+                    header[0].innerHTML=(i+"번째 버튼 클릭됨.(value=")+i.getAttribute('value')+(")")
+                
+            }
+        }
+        
+        
+
+    </script>
+</head>
+
+<body>
+    <h2>n번째 버튼 클릭됨.(value=?) </h2>
+    <table border=1>
+        <tr>
+            <td>목록1</td>
+            <td><button id="1" value="10" onclick="button()">버튼1</button></td>
+        </tr>
+        <tr>
+            <td>목록2</td>
+            <td><button id="2" value="20" onclick="button()">버튼2</button></td>
+        </tr>
+        <tr>
+            <td>목록3</td>
+            <td><button id="3" value="30" onclick="button()">버튼3</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

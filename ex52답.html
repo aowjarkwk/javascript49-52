@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>테이블 리스트에서 문서 객체 선택</title>
+    <script>
+        window.onload = function () {
+            var buttonArray = document.getElementsByTagName('button');
+            buttonArray[0].onclick = function () {
+                // 코드중복을 최소화
+                clickedBtn(1);
+            };
+            buttonArray[1].onclick = function () {
+                clickedBtn(2);
+            };
+            buttonArray[2].onclick = function () {
+                clickedBtn(3);
+            };
+        };
+        function clickedBtn(index) {
+            //index을 통해 btn id를 접근해서 value를 출력함.
+            console.log('click index:' + index);
+            var header2 = document.getElementsByTagName('h2');
+            header2[0].innerHTML = index + '번째 버튼 클릭됨.';
+            var button = document.getElementById('btn' + index);
+            var value = button.value;
+            header2[0].innerHTML += '(value=' + value + ')';
+        }
+    </script>
+</head>
+
+<body>
+    <h2>n번째 버튼 클릭됨.(value=?) </h2>
+    <table border=1>
+        <tr>
+            <td>목록1</td>
+            <td><button id="btn1" value="10">버튼1</button></td>
+        </tr>
+        <tr>
+            <td>목록2</td>
+            <td><button id="btn2" value="20">버튼2</button></td>
+        </tr>
+        <tr>
+            <td>목록3</td>
+            <td><button id="btn3" value="30">버튼3</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

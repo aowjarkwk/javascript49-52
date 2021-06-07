@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS로 태그 속성/CSS 변경하기</title>
+    <style>
+        .active {
+            background-color: red;
+        }
+
+        img {
+            width: 300px;
+            height: 350px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+        };
+        function changeImg() {
+            // 속성 설정 set
+            var img = document.getElementById('img');
+            img.setAttribute('src', './image2.png');
+            // 속성 얻어오기 get
+            var attr = img.getAttribute('src');
+            var header = document.getElementById('name');
+            console.log('arrt:' + attr);
+            header.innerHTML = attr;
+            //동적으로 태그에 class이름 지정하기
+            if (header.classList.contains('active')) {
+                header.classList.remove('active');
+                img.setAttribute('src', './image1.png');
+            } else {
+                header.classList.add('active');
+                img.setAttribute('src', './image2.png');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="name">이미지이름</h1>
+    <img id="img" src="./image1.png" alt="">
+    <button onclick="changeImg()">이미지변경</button>
+</body>
+
+</html>

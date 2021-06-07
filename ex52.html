@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>테이블 리스트에서 문서 객체 선택</title>
+    <script>
+        window.onload = function () { };
+        function button1() {
+            var btn1 = document.getElementById('btn1')
+            var header = document.getElementsByTagName('h2')
+            
+            header[0].innerHTML=("1번째 버튼 클릭됨.(value=")+btn1.getAttribute('value')+(")")
+            
+            
+            
+            
+        }
+        function button2() {
+            var btn2 = document.getElementById('btn2')
+            var header = document.getElementsByTagName('h2')
+            
+            header[0].innerHTML=("2번째 버튼 클릭됨.(value=")+btn2.getAttribute('value')+(")")
+            
+            
+            
+            
+        }
+        function button3() {
+            var btn3 = document.getElementById('btn3')
+            var header = document.getElementsByTagName('h2')
+            
+            header[0].innerHTML=("3번째 버튼 클릭됨.(value=")+btn3.getAttribute('value')+(")")
+            
+            
+            
+            
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>n번째 버튼 클릭됨.(value=?) </h2>
+    <table border=1>
+        <tr>
+            <td>목록1</td>
+            <td><button id="btn1" value="10" onclick="button1()">버튼1</button></td>
+        </tr>
+        <tr>
+            <td>목록2</td>
+            <td><button id="btn2" value="20" onclick="button2()">버튼2</button></td>
+        </tr>
+        <tr>
+            <td>목록3</td>
+            <td><button id="btn3" value="30" onclick="button3()">버튼3</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

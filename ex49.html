@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>연습문제</title>
+    <script>
+        window.onload=function(){
+            var num1 =document.getElementById('num1');
+            var num2 =document.getElementById('num2');
+            var result=document.getElementById('result')
+            var plus = document.getElementById('button1')
+            var minus = document.getElementById('button2')
+            var mul = document.getElementById('button3')
+            var div = document.getElementById('button4')
+            var del = document.getElementById('button5')
+            
+            plus.onclick=function(){
+            result.innerHTML = Number(num1.value) + Number(num2.value);
+            //result.innerHTML = String(Number(num1.innerHTML)+Number(num2.innerHTML));
+            }
+            minus.onclick=function(){
+            result.innerHTML = Number(num1.value)-Number(num2.value);
+            }
+            mul.onclick=function(){
+            result.innerHTML = Number(num1.value)*Number(num2.value);
+            }
+            div.onclick=function(){
+            result.innerHTML = Number(num1.value)/Number(num2.value);
+            }
+            del.onclick=function(){
+            result.innerHTML = 0;
+            num1.value = 0;
+            num2.value = 0;
+            
+            }
+        }
+
+
+    </script>
+    <style>
+        .wrap{
+            width: 300px;
+            margin:0 auto;
+            border:1px solid black;
+            height: 450px;
+            
+        }
+        .header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header div{
+            margin:10px
+        }
+        .numb1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+        }
+        .text{
+            margin-right: 20px;
+        }
+        #num1{
+            background-color: rgb(199, 191, 191);
+            width: 140px;
+            height: 25px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+
+        }
+        .numb2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            margin-top: 15px;
+        }
+        #num2{
+            background-color: rgb(199, 191, 191);
+            width: 140px;
+            height: 25px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        .text2{
+            margin-right: 20px;
+        }
+        .resu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #result{
+            margin-top: 15px;
+            width: 150px;
+            height: 25px;
+            background-color: grey;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        .buttons{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+
+        }
+        #button1{ 
+            margin-top: 15px;
+            display: flex;
+            width: 200px;
+            height: 30px;
+            justify-content: center;
+            background-color: blue;
+            color: white;
+        }
+        #button2{ 
+            margin-top: 5px;
+            display: flex;
+            width: 200px;
+            height: 30px;
+            justify-content: center;
+            background-color: rgb(0, 38, 255);
+            color: white;
+        }
+        #button3{ 
+            margin-top: 5px;
+            display: flex;
+            width: 200px;
+            height: 30px;
+            justify-content: center;
+            background-color: blue;
+            color: white;
+        }
+        #button4{ 
+            margin-top: 5px;
+            display: flex;
+            width: 200px;
+            height: 30px;
+            justify-content: center;
+            background-color: blue;
+            color: white;
+        }
+        #button5{ 
+            margin-top: 5px;
+            display: flex;
+            width: 200px;
+            height: 30px;
+            justify-content: center;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div>JavaScript</div>
+            <div>계산기 프로그램을 작성해보자</div>
+        </div>
+        <div class="numb1">
+            <div class="text">숫자 1</div><input type="text" id="num1">
+        </div>
+        <div class="numb2">
+            <div class="text2">숫자 2</div> <input type="text" id="num2">
+        </div>
+        <div class="resu">
+            연산결과 <div id="result">0</div>
+        </div>
+        <div class="buttons">
+        <input type="button" id="button1" value=덧셈>
+        <input type="button" id="button2"value=나눗셈>
+        <input type="button" id="button3"value=곱셈>
+        <input type="button" id="button4"value=나눗셈>
+        <input type="button" id="button5"value=지우기>
+
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>

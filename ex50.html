@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>자판기 프로그램</title>
+    <script>
+        window.onload = function(){
+        var button1 = document.getElementById('button1')
+        var button2 = document.getElementById('button2')
+        var button3 = document.getElementById('button3')
+        var button4 = document.getElementById('button4')
+        var result = document.getElementById('result')
+        button1.onclick = function(){
+            result.value = Number(result.value)+1000;
+        }
+        button2.onclick = function(){
+            result.value = Number(result.value)+500;
+        }
+        button3.onclick = function(){
+            result.value = Number(result.value)-2000;
+            if (result.value<0){
+                alert('잔액이부족합니다')
+            }
+        }
+        button4.onclick = function(){
+            result.value = Number(result.value)-700;
+            if (result.value<0){
+                alert('잔액이부족합니다')
+            }
+        }
+        };
+    </script>
+    <style>
+        .wrap{
+            width: 400px;
+            margin:0 auto;
+            border: 1px solid black;
+            height: 430px;
+
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .header div:nth-child(1){
+            margin-top: 15px;
+        }
+        .header div:nth-child(2){
+            margin-top: 15px;
+        }
+        .nar{
+            margin-top: 15px;
+        }
+        .nar div:nth-child(1){
+            display: flex;
+            justify-content: center;
+        }
+        .nar div:nth-child(2){
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .nar div:nth-child(3){
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .buttons{
+            margin-top: 15px;
+            margin-left: 50px;
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #button1{
+            width: 145px;
+            margin-top: 15px;
+            
+            background-color: red;
+            color:white;
+            height: 30px;
+            margin-right: 5px;
+        }
+        #button2{
+            margin-top: 15px;
+            width: 145px;
+            background-color: red;
+            color:white;
+            height: 30px;
+            margin-left: 5px;
+        }
+        #button3{
+            margin-top: 15px;
+            flex:1 100%;
+            background-color: teal;
+            color: white;
+            height: 30px;
+        }
+        #button4{
+            margin-top: 15px;
+            flex:1 100%;
+            background-color: green;
+            color: white;
+            height: 30px;
+        }
+        #result{
+            margin-top: 15px;
+            flex:1 100%;
+            background-color: skyblue;
+            color:white;
+            height: 30px;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div>JavaScript</div>
+            <div>자판기 프로그램을 작성해보자</div>
+        </div>
+        <div class="nar">
+            <div>1. 동전 투입시 잔액 추가됨.</div>
+            <div>2. 잔액 부족 시 잔액 부족 팝업</div>
+            <div>3. 뽑기 후에 잔액 차감.</div>
+        </div>
+        <div class="buttons">
+            <input type="button" value="1000원 투입" id="button1">
+            <input type="button" value="500원 투입"id="button2">
+            <input type="button" value="캔음료 2000원 뽑기" id="button3">
+            <input type="button" value=" 생수 700원 뽑기" id="button4">
+            <input type="text" name="" id="result">
+        </div>
+        
+    </div>
+</body>
+</html>
